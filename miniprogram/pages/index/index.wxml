@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <input type="number" placeholder="统一门户账号" model:value="{{stuAccount}}"/>
+  <input  password type="text" placeholder="统一门户密码" model:value="{{stuPassword}}"/>
+  <button  plain="true" bindtap="login">登录</button>
+  <p>请使用统一门户的账号密码以获取教务系统信息。测试账号均为123456</p>
+</view>

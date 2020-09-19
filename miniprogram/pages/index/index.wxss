@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.container input{
+  text-align: center;
+  margin: 20rpx;
+  width: 80%;
+  border-radius: 10rpx;
+  height: 50rpx;
+  padding: 10rpx;
+  border: 1px solid rgb(0, 0, 0,0.5);
+}
+
+.container input:focus-within{
+  height: 50rpx;
+  padding: 20rpx;
+  border: 2rpx solid rgb(52, 127, 225);
+  font-weight: 700;
+}
+
+.container button{
+  background-color: #fe96b4;
+  border: 0;
+  color: white;
+  transition: all 0.3s;
+}
+
+.container p {
+  width: 80%;
+  color: rgb(0, 0, 0,0.7);
+}

@@ -1,0 +1,21 @@
+/* pages/config/index.wxss */
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+#container button{
+  margin-top: 50rpx;
+  background-color: #fe96b4;
+  color: white;
+  border: 0;
+  transition: all 0.5s;
+}
+#container button:active{
+  opacity: 0.6;
+}
+
+#container .logout{
+  background-color: tomato;
+}

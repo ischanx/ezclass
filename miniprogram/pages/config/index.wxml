@@ -1,0 +1,4 @@
+<view id="container">
+  <button class="refresh" plain="true" bindtap="refreshClass">刷新课程表</button>
+  <button class="logout" plain="true" bindtap="logout">退出登录</button>
+</view>

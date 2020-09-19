@@ -1,0 +1,12 @@
+
+#container{
+  padding:1em;
+}
+
+#container > .title{
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  display: block;
+}

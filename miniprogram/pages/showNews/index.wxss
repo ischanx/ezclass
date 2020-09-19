@@ -1,0 +1,45 @@
+.bottom-tip{
+  height: 3em;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 3em;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+.newsCard{
+  text-align: left;
+  word-break: break-all;
+  margin: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 1px 1px #eee;
+  border-radius: 5px;
+  font-size: 1em;
+  display: block;
+  clear: both;
+  padding: 0.8em;
+  padding-bottom: 1.5em;
+}
+.newsCard .title{
+  font-weight: 700;
+}
+
+.newsCard .abstract{
+  font-size: 0.95em;
+  color: rgb(75, 75, 75);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.newsCard .from{
+  color: rgb(140, 140, 140);
+  font-size: 0.8em;
+  float: left;
+}
+
+.newsCard .time{
+  color: rgb(140, 140, 140);
+  font-size: 0.8em;
+  float: right;
+}

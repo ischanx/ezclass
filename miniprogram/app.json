@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/class/index",
+    "pages/showNews/index",
+    "pages/showNews/more",
+    "pages/config/index",
+    "pages/showTodos/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fe96b4",
+    "navigationBarTitleText": "简单的课表程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#fe96b4",
+    "borderStyle": "black" ,
+    "list": [{
+      "selectedIconPath": "images/home-active.png",
+      "iconPath": "images/home.png",
+      "pagePath": "pages/class/index",
+      "text": "课程表"
+      },
+      {
+      "selectedIconPath": "images/news-active.png",
+      "iconPath": "images/news.png",
+      "pagePath": "pages/showNews/index",
+      "text": "通知"
+      },
+      {
+        "selectedIconPath": "images/todo-active.png",
+        "iconPath": "images/todo.png",
+        "pagePath": "pages/showTodos/index",
+        "text": "待办"
+      },
+      {
+        "selectedIconPath": "images/setting-active.png",
+        "iconPath": "images/setting.png",
+        "pagePath": "pages/config/index",
+        "text": "设置"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "plugins": {
+    "wxparserPlugin": {
+      "version": "0.3.0",
+      "provider": "wx9d4d4ffa781ff3ac"
+    }
+  }
+
+}

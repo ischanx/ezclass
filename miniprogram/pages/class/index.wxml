@@ -1,0 +1,52 @@
+<view style="min-height:100%;">
+<view style="display:{{isDetail}};" class="detailWindow" bindtap="showDetail">
+  <view class="detailWindow-container" id="detailWindow">
+    <p style="font-weight:700;font-size:1.3em;">{{currentDetail.kcmc}}</p>
+    <p>
+      <span style="float:left">上课地点</span>
+      <span style="float:right">{{currentDetail.jxcdmc}}</span>
+    </p>
+    <p>
+      <span style="float:left">上课时间</span>
+      <span style="float:right">{{currentDetail.jcdm}}</span>
+    </p>
+    <p>
+      <span style="float:left">教师</span>
+      <span style="float:right">{{currentDetail.teaxms}}</span>
+    </p>
+    <p>
+      <span style="float:left">上课内容</span>
+      <span style="float:right">{{currentDetail.sknrjj?currentDetail.sknrjj:"无说明"}}</span>
+    </p>
+  </view>
+</view>
+<swiper  vertical style="height:{{swiperHeight}}rpx;">
+  <block wx:for="{{classData}}" wx:key="*this" wx:for-index="index">
+    <swiper-item>
+      <view class="class-box">
+        <view class="left-side">
+          <view class="item">{{index + 1}}</view>
+          <view class="item" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:for-item="i">
+            {{i}}
+          </view>
+        </view>
+        <view class="right-side">
+          <view class="top">
+            <view class="item" wx:for="{{['周一','周二','周三','周四','周五','周六','周日']}}" wx:for-item="j">
+            {{j}}
+            </view>
+          </view>
+          <view class="main">
+            <block wx:for="{{item}}" wx:for-item="t">
+              <view  data-item="{{t}}" bindtap="showWindow" class="item" style="top:calc(100%/12*{{ t.top - 1}});left: calc(100%/7*{{t.xq-1}});height: calc(100%/12*{{t.height}} - 10rpx);background-color:{{t.color}} ;">
+                <view class="name">{{t.name}}</view>
+                <view class="pos">{{t.jxcdmc}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+</view>

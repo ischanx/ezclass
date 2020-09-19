@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view style="display:{{isEdit}};" class="editpage">
+    <input type="text" placeholder="请输入待办事项" model:value="{{description}}"/>
+    <button type="default"  bindtap="showEditPage">取消</button>
+    <button type="primary" bindtap="addTodoItem">添加</button>
+  </view>
+   <view id="addBtn" bindtap="showEditPage">+</view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">未完成</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已完成</view>
+  </view>
+
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">
+    <swiper-item>
+      <view wx:for="{{ todolist }}" wx:key="key" class="todoItem" wx:for-item="item" wx:for-index="index">
+        <checkbox-group bindchange="changeItemStatus" data-item="{{item}}" style="display:inline;">
+          <checkbox checked="{{item.done}}"></checkbox>
+        </checkbox-group>
+          <text bindlongpress="longPressHandler" data-item="{{item}}">{{item.description}} 2</text>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view wx:for="{{ todolist }}" wx:key="key" class="todoItem" wx:for-item="item" wx:for-index="index">
+        <view wx:if="{{!item.done}}">
+          <checkbox-group bindchange="changeItemStatus" data-item="{{item}}" style="display:inline;">
+            <checkbox checked="{{item.done}}"></checkbox>
+          </checkbox-group>
+          <text bindlongpress="longPressHandler" data-item="{{item}}">{{item.description}} 2</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view wx:for="{{ todolist }}" wx:key="key" wx:for-item="item" wx:for-index="index">
+        <view wx:if="{{ item.done}}"  class="todoItem">
+          <checkbox-group bindchange="changeItemStatus" data-item="{{item}}" style="display:inline;">
+            <checkbox checked="{{item.done}}"></checkbox>
+          </checkbox-group>
+          <text bindlongpress="longPressHandler" data-item="{{item}}">{{item.description}} 2</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>

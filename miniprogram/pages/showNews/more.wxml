@@ -1,0 +1,5 @@
+<view id="container">
+  <view  class="title"><text>{{news.title}}</text></view>
+  <wxparser rich-text="{{news.content}}" bind:tapLink="filesHandler"/>
+</view>
+

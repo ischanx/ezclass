@@ -1,0 +1,9 @@
+<view wx:for="{{content}}"  wx:key="key" class="newsCard" wx:for-index="index" >
+  <view bindtap="goToMore" data-item="{{item}}" data-index="{{index}}"> 
+    <view class="title">{{item.title}}</view>
+    <view class="abstract">{{item.abstract}}</view>
+    <view class="from">{{item.from}}</view>
+    <view class="time">{{item.time}}</view>
+  </view>
+</view>
+<view wx:if="{{nomore}}" class="bottom-tip">加载完毕</view>

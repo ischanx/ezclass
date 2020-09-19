@@ -1,0 +1,88 @@
+.container {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.editpage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #eee;
+  display: none;
+  text-align: center;
+}
+
+.editpage input {
+  padding: 10rpx;
+  padding-left: 20rpx;
+  font-size: 1em;
+  height: 3em;
+  line-height: 3em;
+  width: 100%;
+  background-color: white;
+  text-align: left;
+  margin-bottom: 20rpx;
+}
+
+.editpage button {
+  display: inline-block;
+  margin: 15rpx;
+
+}
+
+#addBtn {
+  box-sizing: border-box;
+  background-color: #fe96b4;
+  color: white;
+  font-weight: 1000;
+  font-size: 2em;
+  position: fixed;
+  right: 5%;
+  bottom: 20%;
+  padding: 15rpx 30rpx;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777777;
+}
+
+.on {
+  color: blue;
+  border-bottom: 3rpx solid blue;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.todoItem {
+  text-align: left;
+  display: block;
+  margin: 0.5em;
+  padding-top: 0.5em;
+}
